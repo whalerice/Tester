@@ -9,6 +9,14 @@
         width: 100%;
         height: 300px;
         border: 1px solid #000;
+        margin-top: 300px;
+        transition: all 0.5s;
+        opacity: 0;
+        transform: scale(0);
+      }
+      .box.active {
+        opacity: 1;
+        transform: scale(1);
       }
     </style>
   </head>
@@ -27,7 +35,20 @@
     </div>
 
     <script>
-      let = observer = new IntersectionObserver(() => {});
+      let = observer = new IntersectionObserver((box) => {
+        box.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add("active");
+          else e.target.classList.remove("active");
+
+          console.log(e.intersectionRatio);
+        });
+      });
+      let div = document.querySelectorAll(".box");
+
+      for (let i = 0; i < div.length; i++) {
+        const element = div[i];
+        observer.observe(element);
+      }
     </script>
   </body>
 </html>
