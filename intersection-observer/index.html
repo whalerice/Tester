@@ -4,56 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intersection Observer</title>
-    <style>
-      @font-face {
-        font-family: "LOTTERIACHAB";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2")
-          format("woff2");
-        font-weight: normal;
-        font-style: normal;
-      }
-      html,
-      body {
-        color: #333;
-        margin: 0;
-        padding: 0;
-      }
-      h1 {
-        text-align: center;
-      }
-      .box {
-        margin: 400px auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-flow: column;
-        max-width: 500px;
-        height: auto;
-        text-align: center;
-        transition: all 0.5s;
-        opacity: 0;
-        transform: scale(0);
-        font-family: "LOTTERIACHAB";
-        font-size: 40px;
-      }
-      .box.active {
-        opacity: 1;
-        transform: scale(1);
-      }
-      .box p {
-        font-size: 24px;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        html,
-        body {
-          color: #fff;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <h1>Intersection Observer</h1>
+
     <div class="container">
       <div class="box">
         "무엇이든 한계를 두는 것은 바로 나 자신이다."
@@ -89,6 +44,14 @@
         <p>- 울림 -</p>
       </div>
     </div>
+
+    <p class="center">
+      해당 페이지에 사용된 폰트는
+      <a href="https://noonnu.cc/font_page/1100" target="_blank">
+        롯데리아 촵땡겨체
+      </a>
+      입니다.
+    </p>
 
     <script>
       let = observer = new IntersectionObserver((box) => {
