@@ -26,5 +26,9 @@ body {
   html,
   body {
     color: #fff;
+    background-color: #333;
+  }
+  a {
+    color: rgb(22, 94, 161);
   }
 }
