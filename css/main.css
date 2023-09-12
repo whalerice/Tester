@@ -18,6 +18,9 @@ body {
 .list {
   margin: 2rem 0 10rem 3rem;
 }
+.list li {
+  font-size: 1.6rem;
+}
 
 @media (prefers-color-scheme: dark) {
   html,
